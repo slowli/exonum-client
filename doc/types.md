@@ -19,9 +19,9 @@ import { Uint8, Int8, /* lots of other stuff */ } from 'exonum/types';
 - [Common interface](#common-interface)
 - Primitive types:
   - [Integer types](#integer-types)
-  - [Strings](#strings)
-  - [Byte buffers](#byte-buffers)
+  - [String](#string)
   - [Boolean](#boolean)
+  - [Byte buffers](#byte-buffers)
 - Composite types:
   - [Sequences](#sequences)
   
@@ -160,7 +160,7 @@ str = new Str({}); // '[object Object]'
 
 UTF-8 encoding.
 
-## Byte Buffer
+## Byte Buffers
 
 Types representing fixed-length data buffers can be created with the help
 of `fixedBuffer(length)` method.
