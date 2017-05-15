@@ -160,6 +160,32 @@ str = new Str({}); // '[object Object]'
 
 UTF-8 encoding.
 
+## Boolean
+
+Exonum's `Bool` type is a wrapper around native JS booleans.
+
+### Creation
+
+```javascript
+new Bool(true)
+new Bool(false)
+new Bool(anything)
+Bool.true
+Bool.false
+```
+
+Boolean values can be created from JS booleans, or from any other value.
+In the latter case, the value is coerced to boolean using `!!value` operator.
+Additionally, you may use `Bool.true` and `Bool.false` constants.
+
+### JSON Representation
+
+`toJSON()` converts `Bool`s to their wrapped values, `true` or `false`.
+
+#### Binary Serialization
+
+`true` value serializes to a single `1` byte, `false` - to a single `0` byte.
+
 ## Byte Buffers
 
 Types representing fixed-length data buffers can be created with the help
