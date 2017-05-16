@@ -56,7 +56,7 @@ function configureType (type, options) {
   // A little bit of magic
   type.__exonumType = true;
 
-  var hasFixedLength = !!options.byteLength;
+  var hasFixedLength = options.byteLength !== undefined;
   if (hasFixedLength) {
     defineConstant(type, 'byteLength', options.byteLength);
     // Copy the property to instances
