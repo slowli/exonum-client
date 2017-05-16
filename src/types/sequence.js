@@ -2,38 +2,11 @@
 
 const integers = require('./integers');
 const utils = require('./utils');
+const specification = require('./spec');
 
-const reservedPropertyNames = [
-  'get',
-  'set',
-  'byteLength',
-  'hasFixedLength'
-];
-
-// throws on error
-function validateSpec (spec) {
-  spec.forEach((property, i) => {
-    if (!property.name) {
-      throw new Error('No property name specified for property #' + i);
-    }
-    if (reservedPropertyNames.indexOf(property.name) >= 0) {
-      throw new Error('Reserved property name: ' + property.name);
-    }
-    if (!property.type) {
-      throw new Error('No property type specified for property #' + i);
-    }
-    if (!utils.isExonumType(property.type)) {
-      throw new Error('Invalid type: ' + property.type);
-    }
-  });
-
-  // TODO check property uniqueness
-}
-
-function sequence (spec) {
 const sequence = module.exports = function (spec) {
   'use strict';
-  validateSpec(spec);
+  specification.validateAndResolve(spec);
 
   const propertyNames = spec.map(f => f.name);
   // Starting and ending positions of properties/segments
