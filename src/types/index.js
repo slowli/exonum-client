@@ -12,6 +12,7 @@ objectAssign(module.exports,
   { Str: require('./string') },
   { Bool: require('./bool') },
   { sequence: require('./sequence') },
+  { placeholder: require('./placeholder') },
   utils,
   // Specification utils
   {
