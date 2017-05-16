@@ -27,6 +27,4 @@ utils.configureType(Bool, {
 utils.defineConstant(Bool, 'true', new Bool(true));
 utils.defineConstant(Bool, 'false', new Bool(false));
 
-module.exports = {
-  Bool: Bool
-};
+module.exports = Bool;

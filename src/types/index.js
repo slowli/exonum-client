@@ -2,11 +2,12 @@
 
 const objectAssign = Object.assign || require('object-assign');
 
-module.exports = objectAssign({},
+const utils = require('./utils');
+objectAssign(module.exports,
   require('./integers'),
-  require('./string'),
-  require('./bool'),
   require('./buffer'),
-  require('./sequence'),
   require('./crypto'),
-  require('./utils'));
+  { Str: require('./string') },
+  { Bool: require('./bool') },
+  { sequence: require('./sequence') },
+  utils,

@@ -31,6 +31,7 @@ function validateSpec (spec) {
 }
 
 function sequence (spec) {
+const sequence = module.exports = function (spec) {
   'use strict';
   validateSpec(spec);
 
@@ -165,15 +166,9 @@ function sequence (spec) {
   });
 
   return SequenceType;
-}
+};
 
-var Segment = sequence([
+const Segment = sequence.Segment = sequence([
   { name: 'start', type: integers.Uint32 },
   { name: 'length', type: integers.Uint32 }
 ]);
-
-module.exports = {
-  sequence: sequence,
-  Segment: Segment,
-  validateSpec: validateSpec
-};

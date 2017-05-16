@@ -5,7 +5,7 @@ const expect = require('chai')
   .use(require('../chai-bytes'))
   .expect;
 
-const Str = require('../../src/types/string').Str;
+const Str = require('../../src/types/string');
 
 describe('str', function () {
   it('should declare variable length', function () {

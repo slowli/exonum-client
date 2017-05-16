@@ -77,6 +77,4 @@ utils.configureType(Str, {
   proxiedMethods: utils.getMethodNames(String.prototype)
 });
 
-module.exports = {
-  Str: Str
-};
+module.exports = Str;

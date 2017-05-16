@@ -5,7 +5,7 @@ const expect = require('chai')
   .use(require('../chai-bytes'))
   .expect;
 
-const Bool = require('../../src/types/bool').Bool;
+const Bool = require('../../src/types/bool');
 
 describe('Bool', function () {
   it('should declare correct byteLength', function () {

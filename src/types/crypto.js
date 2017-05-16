@@ -1,6 +1,6 @@
 'use strict';
 
-const sequence = require('./sequence').sequence;
+const sequence = require('./sequence');
 const fixedBuffer = require('./buffer').fixedBuffer;
 const crypto = require('../_crypto');
 
